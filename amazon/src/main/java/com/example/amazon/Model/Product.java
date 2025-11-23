@@ -20,6 +20,7 @@ public class Product {
     private Integer id;
     @NotEmpty(message="The Product Name Cannot Be Empty")
     @Size(min=3,message="The Product Name Must Be At Least 3 Length")
+    @Column(columnDefinition = "varchar(20) not null")
     private String name;
     @Positive(message = "The Product Price Must Be Positive Value")
     @Column(columnDefinition = "int not null")
